@@ -467,6 +467,7 @@ footer {
     .fact-container {
         grid-template-columns: repeat(1, 36vh);
         row-gap: 4vh;
+        justify-content: center;
     }
 
     .testimonial-body {
@@ -570,6 +571,7 @@ footer {
     .fact-container {
         grid-template-columns: repeat(2, 25vh);
         row-gap: 4vh;
+        justify-content: center;
     }
 
     .testimonial-body {

@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    text-decoration: none
+    text-decoration: none;
 }
 
 body {
@@ -85,7 +85,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding-top: 4vh; */
 }
 
 .nav-title {
@@ -164,13 +163,17 @@ header {
 /* featurs section css start  */
 .featurs {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 auto;
     margin-top: 15vh;
+    flex-wrap: wrap;
+    column-gap: 2vh;
 }
 
 .featurs-content {
-    width: 50%;
+    width: 40%;
+    margin-top: 5vh;
+    /* margin-right: 20vh; */
 }
 
 .featurs-top-content {
@@ -190,45 +193,37 @@ header {
 
 }
 
-.featurs-img {
+.featurs-img-container{
     width: 50%;
-    position: relative;
+  background-color: aqua;
+  position: relative;
+  border-radius: 1vh;
 }
-.featurs-img > .img-container{
-    width: 90%;
-    height: 95%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-image: url('../images/architect.png');
-    background-position: center;
-    background-size: cover;
-    border-radius: 1vh;
+.featurs-img-container img{
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    object-position: center;
 }
 
-.featurs-img img {
-    width: 100%;
-    /* position: absolute;
-    top: 0;
-    right: 0; */
-    border-radius: 1vh;
-}
-.featurs-img > .years{
+.featurs-img-container > .years{
     position: absolute;
     bottom: -3vh;
-    left: 3vh;
+    left: -6vh;
     background-color: var(--third-color);
-    padding: 6vh 7vh;
     color: var(--white-color);
-    text-align: center;
+    padding: 5vh 7vh;
     border-radius: 1vh;
+    text-align: center;
 }
-.featurs-img > .years > .text-bold{
+.featurs-img-container > .years > .text-bold{
     font-size: 5vh;
-    font-weight: 700;
+    font-weight: 600;
 }
-.featurs-img > .years > .text-thin{
-    font-size: 2.5vh;
+.featurs-img-container > .years > .text-thin{
+    font-weight: 400;
+    font-size: 2vh;
 }
 
 /* fact section css start  */
@@ -286,4 +281,171 @@ footer{
     color: var(--light-black-color);
     background-color: var(--primary-rgb-color);
     padding: 2vh 0;
+}
+
+
+
+/* --------------------------------------------
+                responsive css start  
+---------------------------------------------------*/
+
+@media only screen and (max-width :480px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav > ul {
+        flex-direction: column;
+        row-gap: 2vh;
+        margin-top: 1.5vh;
+    }
+    .banner-content {
+        width: 100%;
+    }
+    .primary-description {
+        font-size: .9rem;
+    }
+    .gallery {
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .gallery-img-container {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .gallery-img-container img {
+        width: 100%;
+    }
+    .gallery-content {
+        width: 100%;
+        margin-top: 4vh;
+    }
+    .featurs {
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .featurs-content {
+        width: 100%;
+    }
+    
+    .featurs-img-container {
+        width: 100%;
+        height: 300px;
+    }
+    .featurs-img {
+        width: 100%;
+        position: relative;
+    }
+
+    .fact-content {
+        margin-bottom: 10vh;
+        width: 100%;
+        text-align: center;
+    }
+    .fact-container {
+        grid-template-columns: repeat(1, 36vh);
+        row-gap: 4vh;
+    }
+    .sponsor-content {
+        width: 100%;
+    }
+    .sponsor-container {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+    .hide-samll{
+        display: none;
+    }
+    .footer-text{
+        font-size: 2vh;
+    }
+}
+
+/* responsive for tablet and larger smartphne */
+@media only screen and (min-width :481px) and (max-width : 768px){
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav > ul {
+        flex-direction: column;
+        row-gap: 2vh;
+        margin-top: 1.5vh;
+    }
+    .banner-content {
+        width: 100%;
+    }
+    .primary-description {
+        font-size: .9rem;
+    }
+
+    /* image gallery section responsive css start  */
+    .gallery {
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .gallery-img-container {
+        width: 100%;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .gallery-img-container img {
+        width: 48%;
+    }
+    .gallery-content {
+        width: 100%;
+        margin-top: 4vh;
+    }
+
+    /* featurs section css start  */
+    .featurs {
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .featurs-content {
+        width: 100%;
+    }
+    .featurs-img-container {
+        width: 100%;
+        background-color: aqua;
+        position: relative;
+        border-radius: 1vh;
+    }
+    .featurs-img {
+
+    }
+    .fact-content{
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 6vh;
+    }
+    .fact-container {
+        grid-template-columns: repeat(2, 36vh);
+        row-gap: 4vh;
+    }
+    .sponsor-content {
+        width: 100%;
+    }
+    .sponsor-container {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+    .hide-samll{
+        display: none;
+    }
+    .footer-text{
+        font-size: 2vh;
+    }
+}
+
+@media only screen and (min-width : 769px) and (max-width : 991px) {
+    .fact-container {
+        grid-template-columns: repeat(3, 36vh);
+        row-gap: 4vh;
+
+    }
 }

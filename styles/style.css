@@ -29,7 +29,9 @@ body {
 .primary-title{
     font-weight: 700;
     color: var(--black-color);
+    font-size: 2.5rem;
 }
+
 .primary-description{
     font-size: 1rem;
     font-weight: 400;
@@ -48,6 +50,12 @@ body {
     font-weight: 500;
     color: var(--white-color);
     border-radius: .8vh;
+}
+.red-color{
+    color: var(--secondary-color);
+}
+.orang-color{
+    color: var(--third-color);
 }
 
 
@@ -84,7 +92,7 @@ header{
     margin: 0 auto;
 }
 .banner-title{
-    font-size: 5vh;
+    font-size: 7vh;
 }
 .banner-img{
     margin-top: 4vh;
@@ -92,3 +100,35 @@ header{
 .banner-img > img{
     width: 100%;
 }
+
+/* gallery section css start  */
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 5vh 0;
+
+}
+.gallery-img-container{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+}
+.gallery-img-container img{
+    width: 45%;
+}
+.gallery-content{
+    width: 40%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.gallery-title > .red-color{
+    font-weight: 500;
+}
+.gallery-btn{
+    display: inline;
+}
+

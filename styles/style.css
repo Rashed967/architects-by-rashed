@@ -9,6 +9,7 @@
 body {
     @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
     font-family: 'Work Sans', sans-serif;
+    margin-bottom: 8vh;
 }
 
 /* regular color and fonts  */
@@ -228,4 +229,61 @@ header {
 }
 .featurs-img > .years > .text-thin{
     font-size: 2.5vh;
+}
+
+/* fact section css start  */
+.fact-section{
+    margin-top: 20vh;
+    margin-bottom: 6vh;
+}
+.fact-content{
+    margin-bottom: 10vh;
+    width: 40%;
+}
+.fact-container{
+    display: grid;
+    grid-template-columns: repeat(4, 36vh);
+    justify-content: space-evenly;
+    column-gap: 4vh;
+    
+}
+.fact-box{
+    border: 1px solid var(--third-color);
+    text-align: center;
+    padding: 4vh 0vh;
+    border-radius: 1vh;
+}
+.fact-box img{
+    width: 20%;
+}
+
+/* sponsor section css start */
+.sponsor-section{
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+
+}
+.sponsor-content{
+     text-align: center;
+     width: 45%;
+     margin: 0 auto;
+}
+.sponsor-container{
+    margin-top: 8vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+.sponsor-container img{
+    width: 40%;
+    filter: grayscale(100%);
+}
+
+/* footer part css start  */
+footer{
+    text-align: center;
+    color: var(--light-black-color);
+    background-color: var(--primary-rgb-color);
+    padding: 2vh 0;
 }

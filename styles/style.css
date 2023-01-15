@@ -64,6 +64,13 @@ body {
     font-weight: 500;
     color: var(--white-color);
     border-radius: .8vh;
+    border: 1px solid var(--third-color);
+    transition: .5s;
+}
+.primary-btn:hover{
+    background-color: transparent;
+    border: 1px solid var(--third-color);
+    color: var(--third-color);
 }
 
 .red-color {
@@ -179,7 +186,8 @@ header {
 .featurs-top-content {
     margin-bottom: 4vh;
 }
-.featurs-bottom-content{
+
+.featurs-bottom-content {
     display: flex;
     flex-direction: column;
     row-gap: 3vh;
@@ -193,21 +201,21 @@ header {
 
 }
 
-.featurs-img-container{
+.featurs-img-container {
     width: 50%;
-  background-color: aqua;
-  position: relative;
-  border-radius: 1vh;
+    position: relative;
+    border-radius: 1vh;
 }
-.featurs-img-container img{
+
+.featurs-img-container img {
     width: 100%;
     height: 100%;
-    
+
     object-fit: cover;
     object-position: center;
 }
 
-.featurs-img-container > .years{
+.featurs-img-container>.years {
     position: absolute;
     bottom: -3vh;
     left: -6vh;
@@ -217,66 +225,135 @@ header {
     border-radius: 1vh;
     text-align: center;
 }
-.featurs-img-container > .years > .text-bold{
+
+.featurs-img-container>.years>.text-bold {
     font-size: 5vh;
     font-weight: 600;
 }
-.featurs-img-container > .years > .text-thin{
+
+.featurs-img-container>.years>.text-thin {
     font-weight: 400;
     font-size: 2vh;
 }
 
 /* fact section css start  */
-.fact-section{
+.fact-section {
     margin-top: 20vh;
     margin-bottom: 6vh;
 }
-.fact-content{
+
+.fact-content {
     margin-bottom: 10vh;
     width: 40%;
 }
-.fact-container{
+
+.fact-container {
     display: grid;
     grid-template-columns: repeat(4, 36vh);
     justify-content: space-evenly;
     column-gap: 4vh;
-    
+
 }
-.fact-box{
+
+.fact-box {
     border: 1px solid var(--third-color);
     text-align: center;
     padding: 4vh 0vh;
     border-radius: 1vh;
-}
-.fact-box img{
-    width: 20%;
+    background-color: var(--white-color);
+    transition: 1s;
 }
 
+.fact-box:hover {
+    background-color: var(--third-color);
+}
+
+.fact-box img {
+    width: 20%;
+    margin-bottom: 1vh;
+    transition: 1s;
+}
+
+.fact-box:hover>img {
+    transform: rotate(30deg);
+}
+
+/* testimonial section css start  */
+
+.testimonioal-header {
+    text-align: center;
+    margin: 8vh 0;
+}
+
+.testimonial-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    justify-items: center;
+    padding: 4vh;
+    flex-wrap: wrap;
+    gap: 5vh;
+}
+
+.testimonial {
+    /* width: 45%; */
+    background-color: var(--white-color);
+    border: 1px solid var(--third-color);
+    padding: 3vh 5vh;
+    border-radius: 1vh;
+
+}
+
+.testimonial-text {
+    margin-bottom: 3vh;
+}
+
+.testimonial-detail img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.testimonial-detail {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.testimonial-img-box {
+    display: flex;
+    align-items: center;
+    column-gap: 1vh;
+}
+
+
 /* sponsor section css start */
-.sponsor-section{
+.sponsor-section {
     margin-top: 15vh;
     margin-bottom: 15vh;
 
 }
-.sponsor-content{
-     text-align: center;
-     width: 45%;
-     margin: 0 auto;
+
+.sponsor-content {
+    text-align: center;
+    width: 45%;
+    margin: 0 auto;
 }
-.sponsor-container{
+
+.sponsor-container {
     margin-top: 8vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-items: center;
 }
-.sponsor-container img{
+
+.sponsor-container img {
     width: 40%;
     filter: grayscale(100%);
 }
 
 /* footer part css start  */
-footer{
+footer {
     text-align: center;
     color: var(--light-black-color);
     background-color: var(--primary-rgb-color);
@@ -294,45 +371,65 @@ footer{
         flex-direction: column;
         align-items: flex-start;
     }
-    .nav > ul {
+
+    .nav>ul {
         flex-direction: column;
         row-gap: 2vh;
         margin-top: 1.5vh;
     }
+
     .banner-content {
         width: 100%;
     }
+
     .primary-description {
         font-size: .9rem;
     }
+
     .gallery {
         justify-content: space-between;
         flex-direction: column;
     }
+
     .gallery-img-container {
         width: 100%;
         justify-content: center;
         flex-direction: column;
     }
+
     .gallery-img-container img {
         width: 100%;
     }
+
     .gallery-content {
         width: 100%;
         margin-top: 4vh;
     }
+
     .featurs {
         justify-content: space-around;
         flex-direction: column;
     }
+
     .featurs-content {
         width: 100%;
     }
-    
+
     .featurs-img-container {
         width: 100%;
         height: 300px;
     }
+    .featurs-img-container>.years {
+        position: absolute;
+        bottom: -14%;
+        left: 21%;
+        background-color: var(--third-color);
+        color: var(--white-color);
+        padding: 4vh 6vh;
+        border-radius: 1vh;
+        text-align: center;
+    }
+
     .featurs-img {
         width: 100%;
         position: relative;
@@ -343,40 +440,52 @@ footer{
         width: 100%;
         text-align: center;
     }
+
     .fact-container {
         grid-template-columns: repeat(1, 36vh);
         row-gap: 4vh;
     }
+
+    .testimonial-body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .sponsor-content {
         width: 100%;
     }
+
     .sponsor-container {
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
         justify-items: center;
     }
-    .hide-samll{
+
+    .hide-samll {
         display: none;
     }
-    .footer-text{
+
+    .footer-text {
         font-size: 2vh;
     }
 }
 
 /* responsive for tablet and larger smartphne */
-@media only screen and (min-width :481px) and (max-width : 768px){
+@media only screen and (min-width :481px) and (max-width : 768px) {
     .nav {
         flex-direction: column;
         align-items: flex-start;
     }
-    .nav > ul {
+
+    .nav>ul {
         flex-direction: column;
         row-gap: 2vh;
         margin-top: 1.5vh;
     }
+
     .banner-content {
         width: 100%;
     }
+
     .primary-description {
         font-size: .9rem;
     }
@@ -386,14 +495,27 @@ footer{
         justify-content: space-between;
         flex-direction: column;
     }
+
     .gallery-img-container {
         width: 100%;
         justify-content: center;
         flex-direction: row;
     }
+
     .gallery-img-container img {
         width: 48%;
     }
+    .featurs-img-container>.years {
+        position: absolute;
+        bottom: -5%;
+        left: 33%;
+        background-color: var(--third-color);
+        color: var(--white-color);
+        padding: 5vh 7vh;
+        border-radius: 1vh;
+        text-align: center;
+    }
+
     .gallery-content {
         width: 100%;
         margin-top: 4vh;
@@ -404,45 +526,62 @@ footer{
         justify-content: space-around;
         flex-direction: column;
     }
+
     .featurs-content {
         width: 100%;
     }
+
     .featurs-img-container {
         width: 100%;
-        background-color: aqua;
         position: relative;
         border-radius: 1vh;
     }
-    .featurs-img {
 
-    }
-    .fact-content{
+    .fact-content {
         text-align: center;
         width: 70%;
         margin: 0 auto;
         margin-bottom: 6vh;
     }
+
     .fact-container {
-        grid-template-columns: repeat(2, 36vh);
+        grid-template-columns: repeat(2, 25vh);
         row-gap: 4vh;
     }
+
+    .testimonial-body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .sponsor-content {
         width: 100%;
     }
+
     .sponsor-container {
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
         justify-items: center;
     }
-    .hide-samll{
+
+    .hide-samll {
         display: none;
     }
-    .footer-text{
+
+    .footer-text {
         font-size: 2vh;
     }
 }
 
 @media only screen and (min-width : 769px) and (max-width : 991px) {
+    .fact-container {
+        grid-template-columns: repeat(2, 36vh);
+        row-gap: 4vh;
+
+    }
+
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
     .fact-container {
         grid-template-columns: repeat(3, 36vh);
         row-gap: 4vh;
